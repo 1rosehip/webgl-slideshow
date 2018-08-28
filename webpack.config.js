@@ -71,7 +71,6 @@ const config = {
     devtool: 'source-map',
 
     plugins: [
-        //new CleanWebpackPlugin(['dist']),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production') //development, production
         }),
@@ -87,6 +86,10 @@ const config = {
     stats: {
         entrypoints: false,
         modules: false
+    },
+
+    watchOptions: {
+        poll: true
     }
 };
 

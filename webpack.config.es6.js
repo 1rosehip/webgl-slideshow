@@ -77,6 +77,10 @@ const config = {
     stats: {
         entrypoints: false,
         modules: false
+    },
+
+    watchOptions: {
+        poll: true
     }
 };
 
