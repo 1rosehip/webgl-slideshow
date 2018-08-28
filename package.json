@@ -1,0 +1,77 @@
+{
+  "name": "webgl-slideshow",
+  "version": "1.0.0",
+  "description": "WebGL based slideshow",
+  "scripts": {
+    "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js",
+    "watch.es6": "webpack --config webpack.config.es6.js --watch",
+    "build.es6": "webpack --config webpack.config.es6.js",
+    "build110": "webpack --config webpack.config.js --version=1.1.0",
+    "test": "jest src",
+    "test120": "jest src/1.2.0",
+    "lint": "./node_modules/.bin/eslint src",
+    "site": "light-server -s docs -p 3000 -b localhost --no-reload -w 'build/site/** # npm run render && echo Rendered!'",
+    "render": "node ./build/site/render.js"
+  },
+  "author": "Miriam Zusin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1rosehip/webgl-slideshow"
+  },
+  "bugs": {
+    "url": "https://github.com/1rosehip/webgl-slideshow/issues"
+  },
+  "keywords": [
+    "slideshow",
+    "slider",
+    "webgl"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "bliss": "^1.0.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.10",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.18.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "from": "^0.1.7",
+    "fs-extra": "^5.0.0",
+    "import": "0.0.6",
+    "jest": "^22.4.0",
+    "light-server": "^2.5.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-prettify": "^0.3.4",
+    "postcss-simple-vars": "^4.1.0",
+    "resolve": "^1.5.0",
+    "sinon": "^4.3.0",
+    "style-loader": "^0.20.3",
+    "uglifycss": "0.0.29",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/globals.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/jest/mocks/style-mock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/jest/mocks/file-mock.js"
+    }
+  },
+  "dependencies": {}
+}
